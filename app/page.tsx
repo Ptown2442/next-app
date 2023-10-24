@@ -1,4 +1,5 @@
 import Image from "next/image";
+import jack from "@/public/images/Jc.jpg";
 import Link from "next/link";
 import ProductCard from "./components/ProductCard";
 import { getServerSession } from "next-auth";
@@ -9,9 +10,7 @@ export default async function Home() {
 
   return (
     <main>
-      <h1>Hello {session && <span>{session.user!.name}</span>}</h1>
-      <Link href="/users">Users</Link>
-      <ProductCard />
+      <Image src={jack} alt="jack playing card" />
     </main>
   );
 }
